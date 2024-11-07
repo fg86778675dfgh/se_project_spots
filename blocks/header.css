@@ -1,0 +1,27 @@
+.header {
+  background-color: #fff;
+  width: 1440px;
+  height: 46px;
+  border-bottom: 1px;
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  width: 1440px;
+  height: 46px;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 627px) {
+  .header {
+    width: 320px;
+    justify-content: space-between;
+  }
+  .header__logo {
+    min-width: 94px;
+    height: 26px;
+    align-content: center;
+    padding: 10px 113px;
+    object-fit: cover;
+  }
+}
