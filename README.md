@@ -18,7 +18,7 @@ This project is focused on creating an interactive social media website, where u
 ## Deployment
 
 This webpage is deployed to GitHub page 
-- [Deployment Link](https://github.com/fg86778675dfgh/se_project_spots?tab=readme-ov-file)
+- [Deployment Link](https://fg86778675dfgh.github.io/se_project_spots/)
 
 
 
