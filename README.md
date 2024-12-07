@@ -10,15 +10,16 @@ This project is focused on creating an interactive social media website, where u
 
 - HTML
 - CSS animation and transform
-- Flexbox 
+- grid 
 - positioning
 - Flat BEM file structure
 - A custom form
+- @ media rule
+- @ font-face rule 
 
 ## Deployment
 
 This webpage is deployed to GitHub page 
 - [Deployment Link](https://fg86778675dfgh.github.io/se_project_spots/)
-
-
+- [Video link](https://drive.google.com/file/d/1-ps_EWrpCxiE9yG7pLyYZQYzBC9CJ4oO/view?pli=1)
 
