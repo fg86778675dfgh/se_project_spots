@@ -1,6 +1,5 @@
 .footer {
-  min-width: 104px;
-  height: 16px;
+  max-width: 104px;
   margin: 60px 667px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
