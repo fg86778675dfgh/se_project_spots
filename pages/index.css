@@ -8,6 +8,3 @@
 @import url(../blocks/card.css);
 @import url(../blocks/cards.css);
 @import url(../blocks/avatar.css);
-* {
-  outline: 1px solid red;
-}
