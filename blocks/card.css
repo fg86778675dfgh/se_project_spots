@@ -1,6 +1,6 @@
 .card {
   min-height: 445px;
-  width: 100%;
+  max-width: 413px;
 }
 .card__content {
   display: flex;
@@ -42,11 +42,14 @@
 @media screen and (max-width: 627px) {
   .card {
     min-height: 318px;
-    width: 100%;
+    max-width: 288px;
     gap: 12px;
   }
   .card__image {
     height: 288px;
     width: 288px;
+  }
+  .card__title {
+    line-height: 16px;
   }
 }

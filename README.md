@@ -22,4 +22,3 @@ This project is focused on creating an interactive social media website, where u
 This webpage is deployed to GitHub page 
 - [Deployment Link](https://fg86778675dfgh.github.io/se_project_spots/)
 - [Video link](https://drive.google.com/file/d/1-ps_EWrpCxiE9yG7pLyYZQYzBC9CJ4oO/view?usp=sharing)
-
