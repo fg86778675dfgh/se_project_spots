@@ -1,9 +1,5 @@
 .page {
-  height: 1416px;
-  width: 1440px;
   background-color: #fcf5e5;
-  background-size: cover;
-  margin: 0 auto;
   font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 .page__section {
