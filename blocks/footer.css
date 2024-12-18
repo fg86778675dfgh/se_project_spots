@@ -1,5 +1,5 @@
 .footer {
-  max-width: 104px;
+  max-width: 1000px;
   margin: 60px 667px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -13,5 +13,6 @@
     margin: 60px 108px;
     align-items: center;
     text-align: center;
+    max-width: 288px;
   }
 }
