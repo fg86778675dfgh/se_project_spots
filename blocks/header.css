@@ -6,10 +6,12 @@
   /*justify-content: center;*/
 }
 .header__logo {
-  width: 1440px;
-  height: 46px;
-  margin: 0;
+  width: 94px;
+  height: 26px;
+  margin: 10px auto;
   padding: 0;
+  align-content: center;
+  object-fit: cover;
 }
 @media screen and (max-width: 627px) {
   .header {
@@ -19,8 +21,5 @@
   .header__logo {
     min-width: 94px;
     height: 26px;
-    align-content: center;
-    padding: 10px 113px;
-    object-fit: cover;
   }
 }
