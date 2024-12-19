@@ -3,6 +3,7 @@
   height: 46px;
   border-bottom: 1px;
   display: flex;
+  width: 1440px;
   /*justify-content: center;*/
 }
 .header__logo {
