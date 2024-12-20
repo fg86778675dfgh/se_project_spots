@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  min-width: 1280px;
+  max-width: 1280px;
   height: 210px;
   padding: 0;
   margin: 20px auto 0;
@@ -54,7 +54,7 @@
   opacity: 100%;
 }
 .profile__add-btn {
-  margin: 138px 0 20px 626px;
+  margin: 138px 0 20px auto;
   height: 52px;
   padding: 18px 24px;
   gap: 8px;
