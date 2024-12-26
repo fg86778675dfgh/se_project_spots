@@ -20,16 +20,13 @@
 }
 @media screen and (max-width: 627px) {
   .page {
-    width: 320px;
-    height: 2524px;
+    max-width: 320px;
   }
   .page__section {
-    min-width: 288px;
-    height: 2028px;
+    max-width: 288px;
     gap: 32px;
   }
   .page__content {
     max-width: 320px;
-    height: 2524px;
   }
 }

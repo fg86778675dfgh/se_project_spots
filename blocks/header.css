@@ -1,9 +1,7 @@
 .header {
   background-color: #fff;
-  height: 46px;
   border-bottom: 1px;
   display: flex;
-  /*justify-content: center;*/
 }
 .header__logo {
   width: 94px;
@@ -15,7 +13,7 @@
 }
 @media screen and (max-width: 627px) {
   .header {
-    width: 320px;
+    width: 100%;
     justify-content: space-between;
   }
   .header__logo {
