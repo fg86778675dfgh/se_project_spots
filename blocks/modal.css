@@ -21,7 +21,7 @@
   box-sizing: border-box;
   border-radius: 8px;
 }
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 .modal__close-btn {
