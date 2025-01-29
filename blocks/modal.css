@@ -31,6 +31,7 @@
   width: 40px;
   height: 40px;
   padding: 0;
+  cursor: pointer;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -53,9 +54,11 @@
   font-weight: 500;
   line-height: 16px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .modal__input {
   padding: 16px 12px;
+  cursor: pointer;
 }
 .modal__close-icon {
   width: 100%;
