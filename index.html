@@ -25,7 +25,7 @@
                <img src="images/pencil.svg" alt="Pencil icon">Edit profile
              </button>
             </div>
-          <button type="button" class="profile__add-btn">
+          <button type="button" id="profile__new-post-btn" class="profile__add-btn">
             <img src="images/plus.svg" alt="Plus icon" class="profile__plus-icon" >New Pots
           </button>
         </section>
@@ -33,13 +33,18 @@
           <ul class="cards__list">
            <template id="card-template">
             <li class="card">
+              <div class="card__img-delete-btn">
+              <button type="submit" class=".card__delete-btn_deleted">
+              </button>
               <img
               src=""
               alt=""
-              class="card__image">
+              class="card__image"/>
+              </div>
               <div class="card__content">
                 <h2 class="card__title"></h2>
-                <button type="button" class="card__like-btn"></button>
+                <button type="button" class="card__like-btn">
+                </button>
               </div>
             </li>
            </template>
@@ -47,6 +52,8 @@
         </section>
       </main>
       <footer class="footer">2024 © Spots</footer>
+
+
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
@@ -55,13 +62,65 @@
           <h2 class="modal__title">Edit profile</h2>
           <form name="edit-profile" id="profile-form" class="modal__form">
             <label for="profile-name-input" class="modal__label">Name
-              <input id="profile-name-input" type="text" class="modal__input"/>
+              <input
+              id="profile-name-input"
+              type="text"
+              name="name"
+              placeholder="Type your name"
+              class="modal__input"/>
             </label>
             <label for="profile-description-input" class="modal__label">Description
-              <input id="profile-description-input" type="text" class="modal__input"/>
+              <input
+              id="profile-description-input"
+              type="text"
+              name="description"
+              placeholder="Describe yourself"
+              class="modal__input"/>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
+        </div>
+      </div>
+
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="images/CloseIcon.svg" alt="close icon" class="modal__close-icon">
+          </button>
+          <h2 class="modal__title">New post</h2>
+          <form name="edit-profile" id="add-card-form" class="modal__form">
+            <label for="add-card-link-input" class="modal__label">image link
+              <input
+              id="add-card-link-input"
+              type="url"
+              name="link"
+              placeholder="Paste a link to the picture"
+              class="modal__input"/>
+            </label>
+            <label for="add-card-name-input" class="modal__label">Caption
+              <input
+              id="add-card-name-input"
+              type="text"
+              name="name"
+              placeholder="Type your caption"
+              class="modal__input"/>
+            </label>
+            <button type="submit" id="add-card-btn" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
+
+      <div class="modal" id="preview-modal">
+        <div class="modal__caption modal__content_type_preview">
+          <button
+          arial-label="Close modal"
+          class="modal__close-btn modal__ close_type_preview"
+          type="button"></button>
+          <img src=""
+          alt=""
+          class="modal__image"/>
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>

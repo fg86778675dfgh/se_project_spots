@@ -50,14 +50,17 @@
 }
 .modal__submit-btn {
   padding: 18px 0;
-  width: 156px;
+  width: 100%;
+  max-width: 156px;
   background-color: #212121;
   color: #fcf5e5;
   font-size: 16px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 .modal__input {
   padding: 16px 12px;
@@ -68,6 +71,43 @@
   width: 100%;
   gap: 421px;
   background-color: #fff;
+}
+.modal__close_type_preview {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  background-image: url("../images/delete-icon.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__caption{
+  margin: 8px;
+  max-width: 135px;
+  max-height: 32px;
+  padding: 4px 8px;
+  background-color: #212121;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: Poppins;
+  font-weight: 500;
+  text-align-last: center;
+}
+.modal__image {
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  position:relative;
+}
+.modal__content_type_preview {
+  padding: 0;
 }
 @media screen and (max-width: 627px) {
   .modal {
