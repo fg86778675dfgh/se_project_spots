@@ -33,14 +33,12 @@
           <ul class="cards__list">
            <template id="card-template">
             <li class="card">
-              <div class="card__img-delete-btn">
-              <button type="submit" class=".card__delete-btn_deleted">
+              <button aria-level="Close modal" type="button" class="card__delete-btn_deleted">
               </button>
               <img
               src=""
               alt=""
               class="card__image"/>
-              </div>
               <div class="card__content">
                 <h2 class="card__title"></h2>
                 <button type="button" class="card__like-btn">
@@ -112,10 +110,10 @@
 
 
       <div class="modal" id="preview-modal">
-        <div class="modal__caption modal__content_type_preview">
+        <div class="modal__content modal__content_type_preview">
           <button
           arial-label="Close modal"
-          class="modal__close-btn modal__ close_type_preview"
+          class="modal__close-btn modal__close_type_preview"
           type="button"></button>
           <img src=""
           alt=""

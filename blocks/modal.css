@@ -26,13 +26,17 @@
   visibility: visible;
 }
 .modal__close-btn {
+  background: transparent center no-repeat;
+  background-size: 35px 35px;
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
   padding: 0;
-  border: 0px;
+  margin: 0;
+  border: none;
+  opacity: 0.4;
   cursor: pointer;
 }
 .modal__title {
@@ -72,22 +76,30 @@
   gap: 421px;
   background-color: #fff;
 }
+.modal__close-icon:hover{
+  background-image: url("../images/Close-dark-icon.svg");
+}
+
 .modal__close_type_preview {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  left: 10px; /* Adjust as needed */
-  background-image: url("../images/delete-icon.png");
+  background-image: url("../images/Close-light-icon.png");
+  top: 10px;
+  left: 946px;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 32px;
   height: 32px;
   border: none;
   cursor: pointer;
+  opacity: 100%;
+}
+.modal__close_type_preview:hover{
+  background-image: url("../images/CloseIcon.svg");
 }
 
 .modal__caption{
   margin: 8px;
-  max-width: 135px;
+  max-width: 590px;
   max-height: 32px;
   padding: 4px 8px;
   background-color: #212121;
@@ -98,20 +110,40 @@
   font-family: Poppins;
   font-weight: 500;
   text-align-last: center;
-}
+  align-items: normal;
+  position: absolute;
+  top: 730px;
+  left: 390px;}
 .modal__image {
   width: 100%;
   max-width: 80vw;
   max-height: 80vh;
   object-fit: contain;
   position:relative;
+  border-radius: 8px;
+}
+.modal__content {
+  max-width: 730px;
+  width:100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  padding:36px 50px 32px;
 }
 .modal__content_type_preview {
   padding: 0;
+  width: 100%;
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  background-color: rgba(0, 0, 0, 0.0);
 }
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 16px;
+    margin:0;
+    justify-content:
   }
   .modal__container {
     padding: 12px;
@@ -130,5 +162,21 @@
   .modal__close-btn {
     top: 12px;
     right: 12px;
+  }
+  .modal__close_type_preview{
+    margin: 0 10px;
+    left: 264px;
+  }
+  .modal__image {
+    Width: 288px;
+    Height: 426.57px;
+    Top: 51px;
+    Left: 16px;
+    border-radius: 4px;
+  }
+  .modal__caption {
+    max-height: 27px;
+    top: 480px;
+    left: 16px;
   }
 }

@@ -1,6 +1,7 @@
 .card {
   min-height: 445px;
   max-width: 413px;
+  position: relative;
 }
 .card__content {
   display: flex;
@@ -73,5 +74,8 @@
     line-height: 16px;
     max-width: 250px;
     font-size: 16px;
+  }
+  .card__delete-btn_deleted{
+    margin: 10px 0 0 245px;
   }
 }

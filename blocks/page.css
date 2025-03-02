@@ -9,6 +9,7 @@
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
+  position: relative;
 }
 .page__content {
   min-height: 100vh;
