@@ -90,11 +90,11 @@
   width: 32px;
   height: 32px;
   border: none;
-  cursor: pointer;
+  /*cursor: pointer;*/
   opacity: 100%;
 }
 .modal__close_type_preview:hover{
-  background-image: url("../images/CloseIcon.svg");
+  opacity: 40%;
 }
 
 .modal__caption{
@@ -113,7 +113,9 @@
   align-items: normal;
   position: absolute;
   top: 730px;
-  left: 390px;}
+  left: 390px;
+}
+
 .modal__image {
   width: 100%;
   max-width: 80vw;
@@ -138,13 +140,14 @@
   max-width: 80vw;
   max-height: 80vh;
   background-color: rgba(0, 0, 0, 0.0);
+  visibility: 0.3s;
+  opacity: 0.3s ease-in;
 }
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 16px;
-    margin:0;
-    justify-content:
-  }
+    margin:0;}
+
   .modal__container {
     padding: 12px;
     margin: 207px, 355px;
