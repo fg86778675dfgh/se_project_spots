@@ -82,15 +82,14 @@
 
 .modal__close_type_preview {
   position: absolute;
-  background-image: url("../images/Close-light-icon.png");
+  background-image: url(../images/Close-light-icon.png);
   top: 10px;
-  left: 946px;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 32px;
   height: 32px;
   border: none;
-  /*cursor: pointer;*/
+  z-index: 1;
   opacity: 100%;
 }
 .modal__close_type_preview:hover{
@@ -98,32 +97,31 @@
 }
 
 .modal__caption{
-  margin: 8px;
-  max-width: 590px;
-  max-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-width: 214px;
+  height: 32px;
+  text-align: center;
   padding: 4px 8px;
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 1);
   border-radius: 8px;
-  color: #fff;
-  font-size: 20px;
-  line-height: 24px;
-  font-family: Poppins;
-  font-weight: 500;
-  text-align-last: center;
-  align-items: normal;
   position: absolute;
-  top: 730px;
-  left: 390px;
+  color: rgba(255, 255, 255, 1);
+  left: 370px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  top: 750px;
 }
 
 .modal__image {
-  width: 100%;
+  position: relative;
+  object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
-  object-fit: contain;
-  position:relative;
-  border-radius: 8px;
-}
+  border-radius: 8px; }
 .modal__content {
   max-width: 730px;
   width:100%;
@@ -138,10 +136,13 @@
   width: 100%;
   object-fit: contain;
   max-width: 80vw;
-  max-height: 80vh;
+  max-height: 80vw;
   background-color: rgba(0, 0, 0, 0.0);
   visibility: 0.3s;
   opacity: 0.3s ease-in;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 @media screen and (max-width: 627px) {
   .modal {
@@ -181,5 +182,10 @@
     max-height: 27px;
     top: 480px;
     left: 16px;
+  }
+  .modal__content_type_preview{
+    margin-top: 45px;
+    width: 604px;
+    height: 320px;
   }
 }
