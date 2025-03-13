@@ -84,7 +84,7 @@ function openModal(modal) {
   modal.classList.add("modal_opened");
 }
 function closeModal(modal) {
-  return("modal");
+  modal.classList.remove("modal_opened");
 }
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
