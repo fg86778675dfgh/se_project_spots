@@ -39,7 +39,7 @@ const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input");
 //cardModal elements
 const cardModal = document.querySelector("#add-card-modal");
-const cardForm = document.querySelector("#add-card-form");
+const cardForm = document.forms["add-card-form"];
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
@@ -70,7 +70,6 @@ function getCardElement(data) {
       cardElement.remove();
     });
   cardImageElement.addEventListener("click", () => {
-    previewModal.classList
     previewModalImageElement.src = data.link;
     previewModalImageElement.alt = data.name;
     previewModalCaptionElement.textContent = data.name;
@@ -93,29 +92,19 @@ function handleProfileFormSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = {name:cardNameInput.value, link:cardLinkInput.value};
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
+  renderCard(inputValues);
   evt.target.reset();
   closeModal(cardModal)
 }
-editModalCloseBtn.addEventListener("click", () => {
-  closeModal(editModal);
-});
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
-});
-previewModalCloseBtn.addEventListener("click", () => {
-  closeModal(previewModal);
-})
-cardModalCloseBtn.addEventListener("click", () => {
-  closeModal(cardModal);
 });
 editModalBtn.addEventListener("click", () => {
   editModalDescriptionInput.value = profileDescription.textContent;
   editModalNameInput.value = profileName.textContent;
   openModal(editModal);
 });
-const closeButtons = document.querySelectorAll('.modal__close');
+const closeButtons = document.querySelectorAll('.modal__close-btn');
 
 closeButtons.forEach((button) => {
   // Find the closest popup only once
@@ -132,6 +121,7 @@ function renderCard(item, method = "prepend") {
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((item) => {
-  const cardElement=getCardElement(item);
-  cardsList.prepend(cardElement);
+  initialCards.forEach((item) => {
+    renderCard(item);
+  });
 });

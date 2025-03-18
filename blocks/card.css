@@ -50,7 +50,7 @@
 }
 .card__delete-btn_deleted {
   position: absolute;
-  background: transparent url("../images/delete-icon.png") no-repeat;
+  background: transparent url("../images/Delete-icon.svg") no-repeat;
   width: 32px;
   height: 32px;
   border: none;
@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 .card__delete-btn_deleted:hover{
-  background-image: url("../images/Delete-hover-icon.png");
+  background-image: url("../images/Delete-hover-icon.svg");
 }
 
 @media screen and (max-width: 627px) {
