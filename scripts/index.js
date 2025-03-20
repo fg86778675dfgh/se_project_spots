@@ -121,7 +121,5 @@ function renderCard(item, method = "prepend") {
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((item) => {
-  initialCards.forEach((item) => {
     renderCard(item);
-  });
 });
