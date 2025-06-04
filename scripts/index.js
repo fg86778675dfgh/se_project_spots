@@ -1,3 +1,11 @@
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: ".modal__submit-btn_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error"
+};
 const initialCards = [
   {
     name: "Val Thorens",
@@ -92,6 +100,8 @@ function handleProfileFormSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
   const inputValues = {name:cardNameInput.value, link:cardLinkInput.value};
+  const cardElement = getCardElement(values);
+  cardsList.prepend(cardElement);
   renderCard(inputValues);
   evt.target.reset();
   closeModal(cardModal)
@@ -117,7 +127,7 @@ function renderCard(item, method = "prepend") {
   const cardElement = getCardElement(item);
   // Add the card into the section using the method
   cardsList[ method ](cardElement);
-}
+};
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((item) => {
