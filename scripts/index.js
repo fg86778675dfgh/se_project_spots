@@ -48,6 +48,7 @@ const editModalDescriptionInput = editModal.querySelector(
 //cardModal elements
 const cardModal = document.querySelector("#add-card-modal");
 const cardForm = document.forms["add-card-form"];
+const submitCardBtn = cardForm.querySelector(".modal__submit-btn");
 const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
@@ -87,9 +88,13 @@ function getCardElement(data) {
 }
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  modal.addEventListener("click", closeModalOnOverlayClick);
+  document.addEventListener("keydown", handleEscClose);
 }
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modal.removeEventListener("click", closeModalOnOverlayClick);
+  document.removeEventListener("keydown", handleEscClose);
 }
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
@@ -104,14 +109,16 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(cardElement);
   renderCard(inputValues);
   evt.target.reset();
-  closeModal(cardModal)
+  disableButton(submitCardBtn, settings);
+  closeModal(cardModal);
 }
 cardModalBtn.addEventListener("click", () => {
   openModal(cardModal);
 });
 editModalBtn.addEventListener("click", () => {
-  editModalDescriptionInput.value = profileDescription.textContent;
   editModalNameInput.value = profileName.textContent;
+  editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editForm, [editModalNameInput, editModalDescriptionInput]);
   openModal(editModal);
 });
 const closeButtons = document.querySelectorAll('.modal__close-btn');
@@ -133,3 +140,16 @@ cardForm.addEventListener("submit", handleAddCardSubmit);
 initialCards.forEach((item) => {
     renderCard(item);
 });
+function closeModalOnOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.currentTarget);
+  }
+}
+editModal.addEventListener("click", closeModalOnOverlayClick);
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openedModal =
+    document.querySelector(".modal_opened");
+    if (openedModal) {closeModal(openedModal);}
+  }
+}

@@ -49,7 +49,6 @@
 .card__like-btn_liked:hover {
   background-image: url("../images/like-icon-liked-hover.svg");
 }
-
 .card__delete-btn_deleted {
   position: absolute;
   background: transparent url("../images/Delete-icon.svg") no-repeat;
