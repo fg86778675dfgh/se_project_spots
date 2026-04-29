@@ -26,10 +26,7 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     } else {
       buttonElement.disabled = false ;
       buttonElement.classList.remove(inactiveButtonClass);
-    }
-  };
-  const disabledButton = (buttonElement, config) => {
-    debugger;
+    }  };
   const disableButton = (buttonElement, config) => {
     buttonElement.disabled = true;
     buttonElement.classList.add(inactiveButtonClass);
@@ -67,6 +64,4 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
   function setEventListeners(formElement, config) {
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
   };
-};
-
-enableValidation();  
+  enableValidation();  
