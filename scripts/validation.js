@@ -36,8 +36,7 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     buttonElement.classList.remove(inactiveButtonClass);};
   const resetValidation = (formElement, inputElement,config) => {
     inputList.forEach((input) => {
-      hideInputError(formElement, input);
-      hideInputError(formElement, input, config);
+    hideInputError(formElement, input, config);
     });
   };
   
