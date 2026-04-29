@@ -59,9 +59,8 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     inputErrorClass: "form__input_type_error",
     errorClass: "form__error_visible",
   };
-  enableValidation (config);
-  
+
   function setEventListeners(formElement, config) {
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
   };
-  enableValidation();  
+  enableValidation(config);  
