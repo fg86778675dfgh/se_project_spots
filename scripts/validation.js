@@ -41,15 +41,17 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
   
+  function setEventListeners(formElement, config) {
+    const buttonElement = formElement.querySelector(config.submitButtonSelector);
+  };
   
     //TODO - handle initial states
     toggleButtonState(inputList, buttonElement, config);
     const enableValidation = (config) => {
     const formList = document.querySelectorAll(config.formSelector);
-    formList.forEach((formElement) => {
-      setEventListeners(formElement,config);
-    });
-    }
+    //formList.forEach((formElement) => {
+    //  setEventListeners(formElement,config);
+    //});}
   };
   const config = {
     formSelector: ".form",
@@ -59,8 +61,4 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
     inputErrorClass: "form__input_type_error",
     errorClass: "form__error_visible",
   };
-
-  function setEventListeners(formElement, config) {
-    const buttonElement = formElement.querySelector(config.submitButtonSelector);
-  };
-  enableValidation(config);  
+  enableValidation(config);};
