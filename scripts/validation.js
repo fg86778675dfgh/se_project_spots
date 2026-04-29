@@ -1,18 +1,13 @@
-const showInputError = (formElement, inputElement, errorMessage) => {
-  const showInputError = (formElement, inputElement, errorMessage, config) => {
+const showInputError = (formElement, inputElement, errorMessage, config) => {
     const errorMessageElement = document.querySelector(`#${inputElement.id}-error`);
     errorMessageElement.textContent = errorMessage;
     inputElement.classList.add(inputErrorClass);
-    inputElement.classList.add(config.inputErrorClass);
-  };
-  const hideInputError = (formElement, inputElement) => {
+    inputElement.classList.add(config.inputErrorClass);};
   const hideInputError = (config) => {
     const errorMessageElement = formElement.querySelector(`#${inputElement.id}-error`);
     errorMessageElement.textContent = "";
-    inputElement.classList.remove(inputErrorClass);
-  };
-  const checkInputValidity = (formElement, inputElement) => {
-  const checkInputValidity = (formElement, inputElement,config) => {
+    inputElement.classList.remove(inputErrorClass);};
+    const checkInputValidity = (formElement, inputElement,config) => {
     if (!inputElement.validity.valid) {
       showInputError(formElement, inputElement, inputElement.validationMessage);
     } else {
@@ -23,9 +18,7 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   const hasInvalidInput = (inputList) => {
   return inputList.some((input) => {
     return !input.validity.valid;
-     });
-  };
-  const toggleButtonState = (inputElement, buttonElement) => {
+     });};
   const toggleButtonState = (inputElement, buttonElement, config) => {
     if (hasInvalidInput(inputList)){
       disabledButton(buttonElement);
@@ -80,4 +73,4 @@ const showInputError = (formElement, inputElement, errorMessage) => {
   };
 };
 
-enableValidation()};
+enableValidation();  
