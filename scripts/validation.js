@@ -33,10 +33,7 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
   const disableButton = (buttonElement, config) => {
     buttonElement.disabled = true;
     buttonElement.classList.add(inactiveButtonClass);
-    buttonElement.classList.remove(inactiveButtonClass);
-  };
-  const resetValidation = (formElement, inputElement) => {
-    buttonElement.classList.add(inactiveButtonClass);};
+    buttonElement.classList.remove(inactiveButtonClass);};
   const resetValidation = (formElement, inputElement,config) => {
     inputList.forEach((input) => {
       hideInputError(formElement, input);
