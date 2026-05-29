@@ -72,7 +72,7 @@
   transition: 0.30s;
 }
 .modal__submit-btn_disabled{
-  background-color: #212121;
+  background-color: rgba(33, 33, 33, 0.5);
   opacity: 0.3;
   cursor: not-allowed;
 }
@@ -157,6 +157,9 @@
 }
 .modal__content_type_preview {
   padding: 16px;
+}
+.modal_type_preview {
+  
 }
 @media screen and (max-width: 480px) {
   .modal__container {
