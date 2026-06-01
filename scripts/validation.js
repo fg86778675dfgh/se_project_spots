@@ -1,11 +1,11 @@
-/*export const config = {
+export const config = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn-error",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error"
-};*/
+};
 
 const showInputError = (formEl, inputEl, errorMsg) => {
   const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
